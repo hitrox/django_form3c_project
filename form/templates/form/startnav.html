@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'form/main.css' %}">
+	<title></title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Form3C+</a>
+    </div>
+    <ul class="nav navbar-nav">
+     <p class="navbar-text">Solution to every problem...</p>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} ">
+              {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}
+          <h1>Hello World</h1>
+        {% endblock %}
+      </div>
+      <div class="col-md-4">
+        <div class="content-section" style="background: white;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}">
+          <h3>Our Services</h3>
+          <p class='text-muted'>We help you with all this
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-light">Add Receipts</li>
+              <li class="list-group-item list-group-item-light">Manage Income</li>
+              <li class="list-group-item list-group-item-light">Manage Expense</li>
+              <li class="list-group-item list-group-item-light">Check Records</li>
+              <li class="list-group-item list-group-item-light">Collect Summary</li>
+              <li class="list-group-item list-group-item-light">Research</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  
+
+</body>
+</html>
