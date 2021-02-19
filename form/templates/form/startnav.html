@@ -16,7 +16,7 @@
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Form3C+</a>
+      <a class="navbar-brand" href="{% url 'form-start'%}">Form3C+</a>
     </div>
     <ul class="nav navbar-nav">
      <p class="navbar-text">Solution to every problem...</p>
@@ -38,29 +38,10 @@
             {% endfor %}
         {% endif %}
         {% block content %}
-          <h1>Hello World</h1>
+      
         {% endblock %}
       </div>
-      <div class="col-md-4">
-        <div class="content-section" style="background: white;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-}">
-          <h3>Our Services</h3>
-          <p class='text-muted'>We help you with all this
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-light">Add Receipts</li>
-              <li class="list-group-item list-group-item-light">Manage Income</li>
-              <li class="list-group-item list-group-item-light">Manage Expense</li>
-              <li class="list-group-item list-group-item-light">Check Records</li>
-              <li class="list-group-item list-group-item-light">Collect Summary</li>
-              <li class="list-group-item list-group-item-light">Research</li>
-            </ul>
-          </p>
-        </div>
-      </div>
+      
     </div>
   </main>
    <!-- Optional JavaScript -->

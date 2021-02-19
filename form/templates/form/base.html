@@ -13,10 +13,10 @@
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Form3C+</a>
+      <a class="navbar-brand" href="{% url 'form-home' %}">Form3C+</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="{% url 'form-home' %}">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Daily Entry <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Receipt</a></li>
@@ -65,9 +65,9 @@
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Miscellaneous <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Disclaimer</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="{% url 'form-about'%}">About Us</a></li>
+          <li><a href="{% url 'form-disclaimer'%}">Disclaimer</a></li>
+          <li><a href="{% url 'form-feedback'%}">Feedback</a></li>
         </ul>
       </li>
     </ul>
@@ -75,7 +75,7 @@
  <button class="btn btn-primary navbar-btn">Research Data</button>
 </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+      <li><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
       <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
 </nav>
@@ -103,23 +103,7 @@
   </div>
 </nav>
 </nav>
-<!-- Background image -->
-  <div class="p-5 text-center bg-image" style="background-image: url('{% static 'images/hos1.jpg' %}');
-      height: 400px;">
-    
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Background image -->
-</header>
-<div class="container">
-  <h3 style="text-align: center; background-color ='black';">Form3C+ is for medics</h3>
 
-</div>
+
 </body>
 </html>

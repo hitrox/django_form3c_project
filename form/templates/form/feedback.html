@@ -1,0 +1,33 @@
+{% extends 'form/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2><strong>Feedback Form</strong></h2><br>
+  
+  <form>
+    <div class="container">
+<label for="comment">Feedback Type:</label><br>
+  <form>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Comments
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Suggestions
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Questions
+    </label><br><br>
+  </form>
+</div>
+    <div class="form-group">
+  <label for="comment">Describe Your Feedback:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+<div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+    <div class="container">
+  <br><center><input type="submit" class="btn btn-primary btn-lg" value="Submit Button">
+</div>
+{% endblock content %}  
